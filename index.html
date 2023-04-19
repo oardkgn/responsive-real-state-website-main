@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/style.css" />
+
+    <title>Responsive real state website - Bedimcode</title>
+  </head>
+  <body>
+    <div class="backShadow"></div>
+    <div class="header__placeholder">
+      <header class="">
+        <div class="header__logo">Holux<i class="bx bxs-home-alt-2"></i></div>
+        <nav class="header__navbar">
+          <ul class="bottom__menu">
+            <li>
+              <a class="menu_home" href="#heroRef"><i class="bx bx-home-alt-2"></i></a>
+            </li>
+            <li>
+              <a class="menu_residances" href="#residencesRef"><i class="bx bx-building-house"></i></a>
+            </li>
+            <li>
+              <a class="menu_values" href="#aboutUsRef"><i class="bx bx-medal"></i></a>
+            </li>
+            <li>
+              <a class="menu_contact" href="#contactUsRef"><i class="bx bx-phone"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__buttons">
+          <div>
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="checkbox-label">
+              <i class="bx bxs-moon"></i>
+              <i class="bx bxs-sun"></i>
+              <span class="ball"></span>
+            </label>
+          </div>
+          <button class="btn subscribe__btn">Subscribe</button>
+          <button class="menu__toggler">
+            <i class="bx bx-menu menu__btn"></i>
+          </button>
+        </div>
+      </header>
+    </div>
+
+    <!------------------------------- hero --------------------------------->
+
+    <section class="hero" id="heroRef">
+      <h1 class="hero__title">
+        Discover <br />
+        Most Suitable <br />
+        Property
+      </h1>
+      <p class="hero__text">
+        Find a variety of properties that suit you very easily, forget all
+        difficulties in finding a residence for you
+      </p>
+      <div class="hero__search__bar">
+        <div class="search__location__icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <input
+          class="hero__search__input"
+          placeholder="Search by location..."
+          type="text"
+          id="searchInput"
+        />
+        <button class="btn search__btn">Search</button>
+      </div>
+      <div class="hero__infos">
+        <div>
+          <h3>9K <span>+</span></h3>
+          <p>
+            Premium <br />
+            Product
+          </p>
+        </div>
+        <div>
+          <h3>2K <span>+</span></h3>
+          <p>
+            Happy <br />
+            Customer
+          </p>
+        </div>
+        <div>
+          <h3>28K <span>+</span></h3>
+          <p>
+            Awards <br />
+            Winning
+          </p>
+        </div>
+      </div>
+      <div class="hero__image__container">
+        <div class="hero__image__border">
+          <div class="hero__image__div"></div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------- brands --------------------------------->
+
+    <section class="brands">
+      <img src="./img/logo1.png" alt="" />
+      <img src="./img/logo2.png" alt="" />
+      <img src="./img/logo3.png" alt="" />
+      <img src="./img/logo4.png" alt="" />
+    </section>
+
+    <!------------------------------- popular residence section --------------------------------->
+
+    <section class="residences" id="residencesRef">
+      <h5>Best Cohices</h5>
+      <h3>Popular Residences</h3>
+      <div class="swiper residences__carousel">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide a_residence">
+            <img src="./img/popular1.jpg" alt="house" />
+            <div class="residance__info">
+              <p><span>$</span>66,356</p>
+              <p>Garden City Assat</p>
+              <p>
+                Street The Garden City Of Miraflores, Lima - Perú Av. Sol #9876
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide a_residence">
+            <img src="./img/popular2.jpg" alt="house" />
+            <div class="residance__info">
+              <p><span>$</span>92,316</p>
+              <p>Brooklyn City Assat</p>
+              <p>
+                Street The Garden City Of Miraflores, Lima - Perú Av. Sol #9876
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide a_residence">
+            <img src="./img/popular3.jpg" alt="house" />
+            <div class="residance__info">
+              <p><span>$</span>116,255</p>
+              <p>Wextwood Assat</p>
+              <p>
+                Street The Garden City Of Miraflores, Lima - Perú Av. Sol #9876
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide a_residence">
+            <img src="./img/popular4.jpg" alt="house" />
+            <div class="residance__info">
+              <p><span>$</span>97,657</p>
+              <p>Michigan Street</p>
+              <p>
+                Street The Garden City Of Miraflores, Lima - Perú Av. Sol #9876
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide a_residence">
+            <img src="./img/popular5.jpg" alt="house" />
+            <div class="residance__info">
+              <p><span>$</span>152,126</p>
+              <p>Seattle City Avenue</p>
+              <p>
+                Street The Garden City Of Miraflores, Lima - Perú Av. Sol #9876
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!------------------------------- About US --------------------------------->
+
+    <section class="about__us" id="aboutUsRef">
+      <div class="secondary__image"></div>
+      <h5>Our Value</h5>
+      <h3>Value We Give To You</h3>
+      <p class="parag">
+        We always ready to help by providing the best service for you. We
+        believe a good place to live can make your life better.
+      </p>
+      <div class="value__list">
+        <div class="a__value__container">
+          <div class="a__value">
+            <i class="value__icon bx bxs-shield-x"></i>
+            <p class="value__parag">Best interest rates on the market</p>
+            <button class="value__btn">
+              <i class="down__button bx bx-caret-down"></i>
+            </button>
+          </div>
+          <div class="secret__parag">
+            <p>
+              Price we provides is the best for you, we guarantee no price
+              changes on your property due to various unexpected costs that may
+              come.
+            </p>
+          </div>
+        </div>
+        <div class="a__value__container">
+          <div class="a__value">
+            <i class="value__icon bx bxs-x-square"></i>
+            <p class="value__parag">Prevent unstable prices</p>
+            <button class="value__btn">
+              <i class="down__button bx bx-caret-down"></i>
+            </button>
+          </div>
+          <div class="secret__parag">
+            <p>
+              Price we provides is the best for you, we guarantee no price
+              changes on your property due to various unexpected costs that may
+              come.
+            </p>
+          </div>
+        </div>
+        <div class="a__value__container">
+          <div class="a__value">
+            <i class="value__icon bx bxs-bar-chart-square"></i>
+            <p class="value__parag">Best prices on the market</p>
+            <button class="value__btn">
+              <i class="down__button bx bx-caret-down"></i>
+            </button>
+          </div>
+          <div class="secret__parag">
+            <p>
+              Price we provides is the best for you, we guarantee no price
+              changes on your property due to various unexpected costs that may
+              come.
+            </p>
+          </div>
+        </div>
+        <div class="a__value__container">
+          <div class="a__value">
+            <i class="value__icon bx bxs-check-square"></i>
+            <p class="value__parag">Security of your data</p>
+            <button class="value__btn">
+              <i class="down__button bx bx-caret-down"></i>
+            </button>
+          </div>
+          <div class="secret__parag">
+            <p>
+              Price we provides is the best for you, we guarantee no price
+              changes on your property due to various unexpected costs that may
+              come.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------- Contuct Us --------------------------------->
+
+    <section class="contuctUs" id="contactUsRef">
+      <div class="contuct__image"></div>
+      <h5>Contact Us</h5>
+      <h3>Easy to Contact us</h3>
+      <p class="parag">
+        Is there a problem finding your dream home? Need a 
+        guide in buying first home? or need a consultation 
+        on residential issues? just contact us.
+      </p>
+      <div class="contact__grid">
+        <div class="contact_grid__box">
+            <div class="grid_box_upper">
+                <i class='bx bxs-phone-call' ></i>
+                <div>
+                    <h4>Call</h4>
+                    <p>022.321.165.19</p>
+                </div>
+            </div>
+            <button class="grid_box_button">Call Now</button>
+        </div>
+        <div class="contact_grid__box">
+            <div class="grid_box_upper">
+                <i class='bx bxs-message-rounded-dots' ></i>
+                <div>
+                    <h4>Chat</h4>
+                    <p>022.321.165.19</p>
+                </div>
+            </div>
+            <button class="grid_box_button">Chat Now</button>
+        </div>
+        <div class="contact_grid__box">
+            <div class="grid_box_upper">
+                <i class='bx bxs-video' ></i>
+                <div>
+                   <h4>Video Call</h4>
+                   <p>Video Call Now</p>
+                </div>
+            </div>
+            <button class="grid_box_button">Video Call Now</button>
+        </div>
+        <div class="contact_grid__box">
+            <div class="grid_box_upper">
+                <i class='bx bxs-envelope'></i>
+                <div>
+                    <h4>Message</h4>
+                    <p>022.321.165.19</p>
+                </div>
+            </div>
+            <button class="grid_box_button">Message Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!------------------------------- Get Started --------------------------------->
+
+    <section class="getStarted">
+        <div class="getStarted__div">
+        <h2>Get Started with Halux</h2>
+        <p>
+            Subscribe and find super attractive price
+            quotes from us, Find your residence soon
+        </p>
+        <button>
+            Get Started
+        </button>
+        </div>
+    </section>
+
+     <!------------------------------- Footer --------------------------------->
+
+     <section class="footer">
+        <div class="footer__header">
+            <div class="footer__header__logo">Holux <i class="bx bxs-home-alt-2"></i></div>
+            <p>
+                Our vision is to make all people <br> 
+                the best place to live for them.
+            </p>
+        </div>
+        <div class="footer__grid">
+            <div>
+                <h4>About</h4>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">News & Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="">How We Work?</a></li>
+                    <li><a href="">Capital</a></li>
+                    <li><a href="">Security</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Support center</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Follow us</h4>
+                <ul class="socialMedia">
+                    <li><a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle' ></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt' ></i></a></li>
+                    <li><a href="https://www.pinterest.com/"><i class='bx bxl-pinterest' ></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_copyright">
+           <p>&#169; Bedimcode. All rigths reserved</p>
+           <p>
+            Terms & Agreements
+            Privacy Policy
+            </p>
+        </div>
+     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="./assets/main.js"></script>
+  </body>
+</html>
