@@ -28,7 +28,7 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/style.css" />
 
-    <title>Responsive real state website - Bedimcode</title>
+    <title>Holux</title>
   </head>
   <body>
     <div class="backShadow"></div>
@@ -38,16 +38,41 @@
         <nav class="header__navbar">
           <ul class="bottom__menu">
             <li>
-              <a class="menu_home" href="#heroRef"><i class="bx bx-home-alt-2"></i></a>
+              <a class="menu_home" href="#heroRef"
+                ><i class="bx bx-home-alt-2"></i
+              ></a>
             </li>
             <li>
-              <a class="menu_residances" href="#residencesRef"><i class="bx bx-building-house"></i></a>
+              <a class="menu_residances" href="#residencesRef"
+                ><i class="bx bx-building-house"></i
+              ></a>
             </li>
             <li>
-              <a class="menu_values" href="#aboutUsRef"><i class="bx bx-medal"></i></a>
+              <a class="menu_values" href="#aboutUsRef"
+                ><i class="bx bx-medal"></i
+              ></a>
             </li>
             <li>
-              <a class="menu_contact" href="#contactUsRef"><i class="bx bx-phone"></i></a>
+              <a class="menu_contact" href="#contactUsRef"
+                ><i class="bx bx-phone"></i
+              ></a>
+            </li>
+          </ul>
+
+          <ul class="top__menu">
+            <li>
+              <a class="top_menu_home" href="#heroRef">Home</a>
+            </li>
+            <li>
+              <a class="top_menu_residances" href="#residencesRef"
+                >Residences</a
+              >
+            </li>
+            <li>
+              <a class="top_menu_values" href="#aboutUsRef">Value</a>
+            </li>
+            <li>
+              <a class="top_menu_contact" href="#contactUsRef">Contact</a>
             </li>
           </ul>
         </nav>
@@ -55,8 +80,8 @@
           <div>
             <input type="checkbox" class="checkbox" id="checkbox" />
             <label for="checkbox" class="checkbox-label">
-              <i class="bx bxs-moon"></i>
               <i class="bx bxs-sun"></i>
+              <i class="bx bxs-moon"></i>
               <span class="ball"></span>
             </label>
           </div>
@@ -69,58 +94,61 @@
     </div>
 
     <!------------------------------- hero --------------------------------->
-
-    <section class="hero" id="heroRef">
-      <h1 class="hero__title">
-        Discover <br />
-        Most Suitable <br />
-        Property
-      </h1>
-      <p class="hero__text">
-        Find a variety of properties that suit you very easily, forget all
-        difficulties in finding a residence for you
-      </p>
-      <div class="hero__search__bar">
-        <div class="search__location__icon">
-          <i class="fa-solid fa-location-dot"></i>
-        </div>
-        <input
-          class="hero__search__input"
-          placeholder="Search by location..."
-          type="text"
-          id="searchInput"
-        />
-        <button class="btn search__btn">Search</button>
-      </div>
-      <div class="hero__infos">
-        <div>
-          <h3>9K <span>+</span></h3>
-          <p>
-            Premium <br />
-            Product
+    <div class="hero__wrapper">
+      <section class="hero" id="heroRef">
+        <div class="hero__left">
+          <h1 class="hero__title">
+            Discover <br />
+            Most Suitable <br />
+            Property
+          </h1>
+          <p class="hero__text">
+            Find a variety of properties that suit you very easily, forget all
+            difficulties in finding a residence for you
           </p>
+          <div class="hero__search__bar">
+            <div class="search__location__icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <input
+              class="hero__search__input"
+              placeholder="Search by location..."
+              type="text"
+              id="searchInput"
+            />
+            <button class="btn search__btn">Search</button>
+          </div>
+          <div class="hero__infos">
+            <div>
+              <h3>9K <span>+</span></h3>
+              <p>
+                Premium <br />
+                Product
+              </p>
+            </div>
+            <div>
+              <h3>2K <span>+</span></h3>
+              <p>
+                Happy <br />
+                Customer
+              </p>
+            </div>
+            <div>
+              <h3>28K <span>+</span></h3>
+              <p>
+                Awards <br />
+                Winning
+              </p>
+            </div>
+          </div>
         </div>
-        <div>
-          <h3>2K <span>+</span></h3>
-          <p>
-            Happy <br />
-            Customer
-          </p>
+        <div class="hero__image__container">
+          <div class="hero__image__border">
+            <div class="hero__image__div"></div>
+          </div>
         </div>
-        <div>
-          <h3>28K <span>+</span></h3>
-          <p>
-            Awards <br />
-            Winning
-          </p>
-        </div>
-      </div>
-      <div class="hero__image__container">
-        <div class="hero__image__border">
-          <div class="hero__image__div"></div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <!------------------------------- brands --------------------------------->
 
@@ -189,9 +217,18 @@
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div
+          style="
+            position: relative;
+            width: 100%;
+            height: 100px;
+            overflow: visible;
+          "
+        >
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
     </section>
 
@@ -199,75 +236,77 @@
 
     <section class="about__us" id="aboutUsRef">
       <div class="secondary__image"></div>
-      <h5>Our Value</h5>
-      <h3>Value We Give To You</h3>
-      <p class="parag">
-        We always ready to help by providing the best service for you. We
-        believe a good place to live can make your life better.
-      </p>
-      <div class="value__list">
-        <div class="a__value__container">
-          <div class="a__value">
-            <i class="value__icon bx bxs-shield-x"></i>
-            <p class="value__parag">Best interest rates on the market</p>
-            <button class="value__btn">
-              <i class="down__button bx bx-caret-down"></i>
-            </button>
+      <div class="about__us__right">
+        <h5>Our Value</h5>
+        <h3>Value We Give To You</h3>
+        <p class="parag">
+          We always ready to help by providing the best service for you. We
+          believe a good place to live can make your life better.
+        </p>
+        <div class="value__list">
+          <div class="a__value__container">
+            <div class="a__value">
+              <i class="value__icon bx bxs-shield-x"></i>
+              <p class="value__parag">Best interest rates on the market</p>
+              <button class="value__btn">
+                <i class="down__button bx bx-caret-down"></i>
+              </button>
+            </div>
+            <div class="secret__parag">
+              <p>
+                Price we provides is the best for you, we guarantee no price
+                changes on your property due to various unexpected costs that
+                may come.
+              </p>
+            </div>
           </div>
-          <div class="secret__parag">
-            <p>
-              Price we provides is the best for you, we guarantee no price
-              changes on your property due to various unexpected costs that may
-              come.
-            </p>
+          <div class="a__value__container">
+            <div class="a__value">
+              <i class="value__icon bx bxs-x-square"></i>
+              <p class="value__parag">Prevent unstable prices</p>
+              <button class="value__btn">
+                <i class="down__button bx bx-caret-down"></i>
+              </button>
+            </div>
+            <div class="secret__parag">
+              <p>
+                Price we provides is the best for you, we guarantee no price
+                changes on your property due to various unexpected costs that
+                may come.
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="a__value__container">
-          <div class="a__value">
-            <i class="value__icon bx bxs-x-square"></i>
-            <p class="value__parag">Prevent unstable prices</p>
-            <button class="value__btn">
-              <i class="down__button bx bx-caret-down"></i>
-            </button>
+          <div class="a__value__container">
+            <div class="a__value">
+              <i class="value__icon bx bxs-bar-chart-square"></i>
+              <p class="value__parag">Best prices on the market</p>
+              <button class="value__btn">
+                <i class="down__button bx bx-caret-down"></i>
+              </button>
+            </div>
+            <div class="secret__parag">
+              <p>
+                Price we provides is the best for you, we guarantee no price
+                changes on your property due to various unexpected costs that
+                may come.
+              </p>
+            </div>
           </div>
-          <div class="secret__parag">
-            <p>
-              Price we provides is the best for you, we guarantee no price
-              changes on your property due to various unexpected costs that may
-              come.
-            </p>
-          </div>
-        </div>
-        <div class="a__value__container">
-          <div class="a__value">
-            <i class="value__icon bx bxs-bar-chart-square"></i>
-            <p class="value__parag">Best prices on the market</p>
-            <button class="value__btn">
-              <i class="down__button bx bx-caret-down"></i>
-            </button>
-          </div>
-          <div class="secret__parag">
-            <p>
-              Price we provides is the best for you, we guarantee no price
-              changes on your property due to various unexpected costs that may
-              come.
-            </p>
-          </div>
-        </div>
-        <div class="a__value__container">
-          <div class="a__value">
-            <i class="value__icon bx bxs-check-square"></i>
-            <p class="value__parag">Security of your data</p>
-            <button class="value__btn">
-              <i class="down__button bx bx-caret-down"></i>
-            </button>
-          </div>
-          <div class="secret__parag">
-            <p>
-              Price we provides is the best for you, we guarantee no price
-              changes on your property due to various unexpected costs that may
-              come.
-            </p>
+          <div class="a__value__container">
+            <div class="a__value">
+              <i class="value__icon bx bxs-check-square"></i>
+              <p class="value__parag">Security of your data</p>
+              <button class="value__btn">
+                <i class="down__button bx bx-caret-down"></i>
+              </button>
+            </div>
+            <div class="secret__parag">
+              <p>
+                Price we provides is the best for you, we guarantee no price
+                changes on your property due to various unexpected costs that
+                may come.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -277,53 +316,55 @@
 
     <section class="contuctUs" id="contactUsRef">
       <div class="contuct__image"></div>
-      <h5>Contact Us</h5>
-      <h3>Easy to Contact us</h3>
-      <p class="parag">
-        Is there a problem finding your dream home? Need a 
-        guide in buying first home? or need a consultation 
-        on residential issues? just contact us.
-      </p>
-      <div class="contact__grid">
-        <div class="contact_grid__box">
+      <div class="contact__us__left">
+        <h5>Contact Us</h5>
+        <h3>Easy to Contact us</h3>
+        <p class="parag">
+          Is there a problem finding your dream home? Need a guide in buying
+          first home? or need a consultation on residential issues? just contact
+          us.
+        </p>
+        <div class="contact__grid">
+          <div class="contact_grid__box">
             <div class="grid_box_upper">
-                <i class='bx bxs-phone-call' ></i>
-                <div>
-                    <h4>Call</h4>
-                    <p>022.321.165.19</p>
-                </div>
+              <i class="bx bxs-phone-call"></i>
+              <div>
+                <h4>Call</h4>
+                <p>022.321.165.19</p>
+              </div>
             </div>
             <button class="grid_box_button">Call Now</button>
-        </div>
-        <div class="contact_grid__box">
+          </div>
+          <div class="contact_grid__box">
             <div class="grid_box_upper">
-                <i class='bx bxs-message-rounded-dots' ></i>
-                <div>
-                    <h4>Chat</h4>
-                    <p>022.321.165.19</p>
-                </div>
+              <i class="bx bxs-message-rounded-dots"></i>
+              <div>
+                <h4>Chat</h4>
+                <p>022.321.165.19</p>
+              </div>
             </div>
             <button class="grid_box_button">Chat Now</button>
-        </div>
-        <div class="contact_grid__box">
+          </div>
+          <div class="contact_grid__box">
             <div class="grid_box_upper">
-                <i class='bx bxs-video' ></i>
-                <div>
-                   <h4>Video Call</h4>
-                   <p>Video Call Now</p>
-                </div>
+              <i class="bx bxs-video"></i>
+              <div>
+                <h4>Video Call</h4>
+                <p>Video Call Now</p>
+              </div>
             </div>
             <button class="grid_box_button">Video Call Now</button>
-        </div>
-        <div class="contact_grid__box">
+          </div>
+          <div class="contact_grid__box">
             <div class="grid_box_upper">
-                <i class='bx bxs-envelope'></i>
-                <div>
-                    <h4>Message</h4>
-                    <p>022.321.165.19</p>
-                </div>
+              <i class="bx bxs-envelope"></i>
+              <div>
+                <h4>Message</h4>
+                <p>022.321.165.19</p>
+              </div>
             </div>
             <button class="grid_box_button">Message Now</button>
+          </div>
         </div>
       </div>
     </section>
@@ -331,70 +372,79 @@
     <!------------------------------- Get Started --------------------------------->
 
     <section class="getStarted">
-        <div class="getStarted__div">
+      <div class="getStarted__div">
         <h2>Get Started with Halux</h2>
         <p>
-            Subscribe and find super attractive price
-            quotes from us, Find your residence soon
+          Subscribe and find super attractive price quotes from us, Find your
+          residence soon
         </p>
-        <button>
-            Get Started
-        </button>
-        </div>
+        <button>Get Started</button>
+      </div>
     </section>
 
-     <!------------------------------- Footer --------------------------------->
+    <!------------------------------- Footer --------------------------------->
 
-     <section class="footer">
-        <div class="footer__header">
-            <div class="footer__header__logo">Holux <i class="bx bxs-home-alt-2"></i></div>
-            <p>
-                Our vision is to make all people <br> 
-                the best place to live for them.
-            </p>
+    <section class="footer">
+      <div class="footer__header">
+        <div class="footer__header__logo">
+          Holux <i class="bx bxs-home-alt-2"></i>
         </div>
-        <div class="footer__grid">
-            <div>
-                <h4>About</h4>
-                <ul>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">Features</a></li>
-                    <li><a href="">News & Blog</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="">How We Work?</a></li>
-                    <li><a href="">Capital</a></li>
-                    <li><a href="">Security</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="">FAQs</a></li>
-                    <li><a href="">Support center</a></li>
-                    <li><a href="">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Follow us</h4>
-                <ul class="socialMedia">
-                    <li><a href="https://www.facebook.com/"><i class='bx bxl-facebook-circle' ></i></a></li>
-                    <li><a href="https://www.instagram.com/"><i class='bx bxl-instagram-alt' ></i></a></li>
-                    <li><a href="https://www.pinterest.com/"><i class='bx bxl-pinterest' ></i></a></li>
-                </ul>
-            </div>
+        <p>
+          Our vision is to make all people <br />
+          the best place to live for them.
+        </p>
+      </div>
+      <div class="footer__grid">
+        <div>
+          <h4>About</h4>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">News & Blog</a></li>
+          </ul>
         </div>
-        <div class="footer_copyright">
-           <p>&#169; Bedimcode. All rigths reserved</p>
-           <p>
-            Terms & Agreements
-            Privacy Policy
-            </p>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="">How We Work?</a></li>
+            <li><a href="">Capital</a></li>
+            <li><a href="">Security</a></li>
+          </ul>
         </div>
-     </section>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="">FAQs</a></li>
+            <li><a href="">Support center</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Follow us</h4>
+          <ul class="socialMedia">
+            <li>
+              <a href="https://www.facebook.com/"
+                ><i class="bx bxl-facebook-circle"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="bx bxl-instagram-alt"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/"
+                ><i class="bx bxl-pinterest"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_copyright">
+        <p>&#169; Bedimcode. All rigths reserved</p>
+        <p>Terms & Agreements Privacy Policy</p>
+      </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./assets/main.js"></script>

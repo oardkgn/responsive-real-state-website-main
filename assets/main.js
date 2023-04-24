@@ -9,11 +9,17 @@ const down__button = document.querySelectorAll('.down__button')
 const menu_home = document.querySelector('.menu_home') 
 const menu_residances = document.querySelector('.menu_residances') 
 const menu_values = document.querySelector('.menu_values') 
-const menu_contact = document.querySelector('.menu_contact') 
+const menu_contact = document.querySelector('.menu_contact')
+const top_menu_home = document.querySelector('.top_menu_home') 
+const top_menu_residances = document.querySelector('.top_menu_residances') 
+const top_menu_values = document.querySelector('.top_menu_values') 
+const top_menu_contact = document.querySelector('.top_menu_contact')
+const checkbox = document.querySelector('#checkbox')
+const brands = document.querySelector('.brands')
+
 
 menuBtn.addEventListener('click',(e) => {
     menuBtn.classList.toggle('active') 
-
     bottomMenu.classList.toggle('showing')
 })
 
@@ -23,37 +29,69 @@ window.addEventListener('scroll',() => {
         header.classList.add('dragging')
         header__logo.classList.add('dragging')
         menu__toggler.classList.add('dragging')
+        top_menu_home.classList.add('dragging')
+        top_menu_residances.classList.add('dragging')
+        top_menu_values.classList.add('dragging')
+        top_menu_contact.classList.add('dragging')
     }else{
         header.classList.remove('dragging')
         header__logo.classList.remove('dragging')
         menu__toggler.classList.remove('dragging')
+        top_menu_home.classList.remove('dragging')
+        top_menu_residances.classList.remove('dragging')
+        top_menu_values.classList.remove('dragging')
+        top_menu_contact.classList.remove('dragging')
     }
     
     if(scrollY <= 1000){
         menu_home.classList.add('active')
+        top_menu_home.classList.add('active')
         menu_residances.classList.remove('active')
+        top_menu_residances.classList.remove('active')
         menu_values.classList.remove('active')
+        top_menu_values.classList.remove('active')
         menu_contact.classList.remove('active')
+        top_menu_contact.classList.remove('active')
 
     }else if(scrollY <= 1700){
         menu_home.classList.remove('active')
+        top_menu_home.classList.remove('active')
         menu_residances.classList.add('active')
+        top_menu_residances.classList.add('active')
         menu_values.classList.remove('active')
+        top_menu_values.classList.remove('active')
         menu_contact.classList.remove('active')
+        top_menu_contact.classList.remove('active')
     }else if(scrollY <= 2750){
         menu_home.classList.remove('active')
         menu_residances.classList.remove('active')
+        top_menu_residances.classList.remove('active')
         menu_values.classList.add('active')
+        top_menu_values.classList.add('active')
         menu_contact.classList.remove('active')
+        top_menu_contact.classList.remove('active')
     }else{
         menu_home.classList.remove('active')
         menu_residances.classList.remove('active')
+        top_menu_residances.classList.remove('active')
         menu_values.classList.remove('active')
+        top_menu_values.classList.remove('active')
         menu_contact.classList.add('active')
+        top_menu_contact.classList.add('active')
     }
 })
 
 const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    breakpoints: {
+      600: {
+            slidesPerView: 2,
+      },
+      930:{
+        slidesPerView: 3,
+      }
+    },
+    spaceBetween:10,
     // Optional parameters
     direction: 'horizontal',
     loop: true,
@@ -78,3 +116,43 @@ const swiper = new Swiper('.swiper', {
         e.target.parentNode.children[2].children[0].classList.toggle('active')
     })
  })
+
+ checkbox.addEventListener('change', function() {
+    if (this.checked) {
+        document.querySelector('body').style.backgroundColor = 'var(--dark-header-color)'
+        document.querySelectorAll('p').forEach(item => {
+            item.style.color = 'whitesmoke'
+        })
+        document.querySelectorAll('h3').forEach(item => {
+            item.style.color = 'skyblue'
+        })
+        document.querySelectorAll('.a__value__container').forEach(item => {
+            item.style.backgroundColor = 'rgb(37, 37, 37)'
+        })
+        document.querySelectorAll('h4').forEach(item => {
+            item.style.color = 'whitesmoke'
+        })
+        document.querySelectorAll('h2').forEach(item => {
+            item.style.color = 'whitesmoke'
+        })
+        header.style.backgroundColor='var(--dark-header-color)'
+    } else {
+        document.querySelector('body').style.backgroundColor = 'whitesmoke'
+        document.querySelectorAll('p').forEach(item => {
+            item.style.color = 'var(--dark-header-color)'
+        })
+        document.querySelectorAll('h3').forEach(item => {
+            item.style.color = 'rgb(46, 51, 57)'
+        })
+        document.querySelectorAll('.a__value__container').forEach(item => {
+            item.style.backgroundColor = 'transparent'
+        })
+        document.querySelectorAll('h4').forEach(item => {
+            item.style.color = 'var(--dark-header-color)'
+        })
+        document.querySelectorAll('h2').forEach(item => {
+            item.style.color = 'var(--dark-header-color)'
+        })
+        header.style.backgroundColor='transparent'
+    }
+  });

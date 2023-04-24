@@ -10,6 +10,7 @@
     --swiper-pagination-color: #f39c12;
     --swiper-navigation-size: 18px;
     --swiper-navigation-color: #424242;
+    --swiper-pagination-bottom: 58px;
 }
 
 
@@ -36,10 +37,12 @@ html{
 body{
     width: 100%;
     background-color: whitesmoke;
+    transition: all 0.3s;
 }
 
 p{
     color: #292c35;
+     /* color: rgb(57, 57, 57);  */
 }
 
 .btn{
@@ -128,6 +131,7 @@ h3{
     background: linear-gradient(149deg, rgba(255,255,255,0.1657913165266106) 0%, rgba(55,54,54,0) 59%);
     width: 100%;
     height: 500px;
+    z-index:-1;
   }
 
   /* ------------------------------------------------------------- */
@@ -137,6 +141,7 @@ h3{
 .header__placeholder{
     width: 100%;
     height: 71px;
+    background-color: var(--dark-header-color);
 }
 
 header{
@@ -148,6 +153,8 @@ header{
     width: 100%;
     z-index: 10;
     border: none;
+    max-width:2000px;
+    margin: 0px auto 0px auto;
 }
 
 @keyframes flow {
@@ -159,10 +166,18 @@ header{
 header.dragging{
     position: fixed;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: whitesmoke;
     border-bottom: 2px solid gainsboro;
     animation: flow 0.3s ease-in-out;
+}
+
+header.dragging .header__navbar .bottom__menu{
+    top: 740px;
+    padding: 24px 40px;
+    width: 300px;
+    height: 85px;
 }
 
 .header__logo{
@@ -178,11 +193,11 @@ header.dragging{
     color: rgb(62, 93, 150);
 }
 
-.header__navbar ul{
-    bottom: 15px;
+.header__navbar .bottom__menu{
+    position: fixed;
+    bottom: 10px;
     left: 150%;
     transform: translateX(-50%);
-    position: fixed;
     display: flex;
     justify-content: center;
     gap: 1.5rem;
@@ -197,11 +212,11 @@ header.dragging{
     z-index: 10;
 }
 
-.header__navbar ul.showing{
+.header__navbar .bottom__menu.showing{
     left: 50%;
 }
 
-.header__navbar ul li a{
+.header__navbar .bottom__menu li a{
     text-align: center;
     line-height: 43px;
     border-radius: 100%;
@@ -210,12 +225,19 @@ header.dragging{
     height: 40px;
 }
 
-.header__navbar ul li a:is(.active){
+.header__navbar .bottom__menu li a:is(.active){
     transition: 0.3s; 
     width: 40px;
     border-radius: 100%;
     background-color: rgb(44, 82, 208);
     color: white;
+    width: 40px;
+    height: 40px;
+}
+
+.header__navbar .top__menu li a:is(.active){
+    transition: 0.3s; 
+    color: dodgerblue;
     width: 40px;
     height: 40px;
 }
@@ -248,9 +270,36 @@ header.dragging{
     transform: scale(1.4);
 }
 
+
+.top__menu{
+    display: flex;
+    color: whitesmoke;
+    gap: 1rem;
+    padding: 14px 10px;
+}
+
+.top__menu a{
+    color: whitesmoke;
+    font-weight: 400;
+    z-index: 2000 !important;
+    cursor: pointer !important;
+}
+
+.top__menu a.dragging{
+    color:#292c35;
+}
+
+.top__menu a.active{
+    color: dodgerblue;
+}
+
   /* ------------------------------------------------------------- */
 
   /* hero section */
+
+.hero__wrapper{
+    background-color: var(--dark-header-color);
+}
 
 .hero{
     z-index: 2;
@@ -258,6 +307,8 @@ header.dragging{
     color: whitesmoke;
     padding: 40px 30px 0px 30px;
     margin-top: -1px;
+    max-width: 2000px;
+    margin: -1px auto 0px auto;
 }
 
 .hero__title{
@@ -328,6 +379,7 @@ header.dragging{
     position: relative;
     background-color: var(--dark-header-color);
     height:360px;
+    
 }
 
 .hero__image__border{
@@ -340,6 +392,7 @@ header.dragging{
     padding: 10px 10px;
     top: 40px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    max-width: 600px;
 }
 
 .hero__image__div{
@@ -349,6 +402,11 @@ header.dragging{
     background-repeat: no-repeat;
     border-radius: 145px 145px 20px 20px;
     background-position: bottom;
+    
+}
+
+.hero__left{
+
 }
 
 /* ------------------------------------------------------------------------ */
@@ -357,9 +415,9 @@ header.dragging{
 
 
 .brands{
-    margin-top: 70px;
-    margin-bottom: 10px;
+    margin: 70px auto 0px auto;
     padding: 30px;
+    max-width: 1000px;
     width: 100%;
     display: grid;
     gap: 30px;
@@ -378,16 +436,19 @@ header.dragging{
 
 .residences{
     padding: 30px;
-    padding-top: 90px;
+    padding-top: 30px;
     margin-top: 10px;
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .residences__carousel{
     width: 100%;
-    max-width: 400px;
-    height: 500px;
+    height: auto;
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .a_residence{
@@ -433,19 +494,23 @@ header.dragging{
 
 .swiper-pagination{
     display: block;
-    margin-bottom:54px;
+    position: absolute;
+    
 }
 
 .swiper-button-prev{
-    top: 420px;
+    position: absolute;
+    top: 22px;
     left: calc(50% - 100px);
     border-radius: 10px;
     padding: 24px;
     color: #292c35;
     box-shadow: rgba(36, 36, 36, 0.2) 0px 7px 29px 0px;
+    z-index: 40 !important;
 }
 .swiper-button-next{
-    top: 420px;
+    position: absolute;
+    top: 22px;
     left: calc(50% + 50px);
     border-radius: 10px;
     padding: 24px;
@@ -459,7 +524,8 @@ header.dragging{
 
 .about__us{
     padding: 30px;
-
+    max-width: 1600px;
+    margin: 0px auto;
 }
 
 .secondary__image{
@@ -556,6 +622,8 @@ header.dragging{
 
 .contuctUs{
     padding: 100px 30px 10px 30px;
+    max-width: 1600px;
+    margin: 0px auto 0px auto;
 }
 
 .contuct__image{
@@ -629,6 +697,8 @@ header.dragging{
 .getStarted{
     padding: 30px;
     margin-top: 40px;
+    max-width: 800px;
+    margin: 40px auto;
     
 }
 
@@ -664,16 +734,21 @@ header.dragging{
 
 .footer{
     padding: 30px;
+    max-width: 1600px;
+    margin: 10px auto 0px auto;
 }
 
-.footer__header__logo{
-    font-size: 1.5rem;
+.footer__header{
+    font-size: 1.2rem;
     color: hsl(230,50%,58%);
     margin-bottom: 10px;
+    max-width: 800px;
+    margin: 0px auto;
+
 }
 
 .footer__grid{
-    margin-top: 50px;
+    margin-top: 120px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -694,4 +769,188 @@ header.dragging{
 .footer_copyright{
     padding: 90px 30px 80px 30px;
     text-align: center;
+}
+
+/* ------------------------------------------------------------------------ */
+
+/* Breakpoints */
+
+@media only screen and (max-width: 600px) {
+    .menu__toggler{
+        display: block;
+    }
+    .top__menu{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .menu__toggler{
+        display: none;
+    }
+
+    .top__menu{
+        display: flex;
+        font-size: 0.8rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .top__menu{
+        gap: 1.8rem;
+    }
+    .hero{
+        display: flex;
+        gap: 80px;
+        padding-bottom: 30px;
+    }
+    .hero__left{
+        width: 50%;
+    }
+    .hero__image__container{
+        width: 50%;
+        bottom: -110px;
+        height: 450px;
+        background-color: transparent;
+    }
+
+    .hero__image__border{
+        box-shadow: none;
+        position: static;
+        width: 100%;
+        margin-left: 50%;
+        margin-top: -40px;
+    }
+    .hero__image__div{
+        height: 450px;
+    }
+    
+    .hero__title{
+        font-size: 3rem;
+    }
+    .hero__text{
+        font-size: 1.2rem;
+    }
+    .hero__search__input{
+        font-size: 1.2rem;
+    }
+    .hero__image__container{   
+        bottom: -170px;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    .contact__us__left .parag{
+        font-size: 1.1rem !important;
+    }
+    .about__us__right .parag{
+        font-size: 1.1rem !important;
+    }
+    .value__parag{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 1.2rem;
+    }
+    .top__menu a{
+        font-size: 0.8rem;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .brands{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .hero__image__container{
+        width: 50%;
+        bottom: -110px;
+        height: 550px;
+        background-color: transparent;
+    }
+    .hero__image__div{
+        height: 550px;
+    }
+    .about__us{
+        display: flex;
+        gap: 20px;
+    }
+    .secondary__image{
+        width: 420px;
+        height: 520px;
+        margin-top: 80px;
+
+    }    
+    .about__us__right{
+        width: 60%;
+    }
+    .contuctUs{
+        display: flex;
+        gap: 20px;
+        flex-direction: row-reverse;
+    }
+    .contact__us__left{
+        width: 60%;
+    }
+    .contuct__image{
+        width: 420px;
+        height: 520px;
+        margin: 30px auto;
+    }
+    .footer__grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .hero__image__div{
+        height: 600px;
+    }
+    .hero__image__container{
+        width: 50%;
+        bottom: -50px;
+        height: 550px;
+        background-color: transparent;
+        padding: 0px;
+    }
+    .hero__title{
+        font-size: 4rem;
+    }
+    .hero__text{
+        font-size: 1.4rem;
+    }
+    .hero__search__input{
+        font-size: 1.6rem;
+    }
+    .hero__image__container{   
+        bottom: -110px;
+    }
+    h5{
+        font-size: 2.2rem;
+    }
+    h3{
+        font-size: 1.6rem;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    .contact__us__left .parag{
+        font-size: 1.3rem !important;
+    }
+    .about__us__right .parag{
+        font-size: 1.3rem !important;
+    }
+    .value__parag{
+        font-size: 1.2rem;
+    }
+    button{
+        font-size: 1.4rem;
+    }
+    .top__menu a{
+        font-size: 1rem;
+    }
 }
