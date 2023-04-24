@@ -156,3 +156,20 @@ const swiper = new Swiper('.swiper', {
         header.style.backgroundColor='transparent'
     }
   });
+
+  const sr = ScrollReveal({
+    origin:'top',
+    distance:'60px',
+    duration:2500,
+    delay:300,
+    //reset:true
+  })
+
+  sr.reveal('.hero__title, .residences__carousel, .getStarted,.footer ')
+  sr.reveal('.hero__text',{delay:400}) 
+  sr.reveal('.hero__search__bar',{delay:500}) 
+  sr.reveal('.hero__infos',{delay:600}) 
+  sr.reveal('.hero__image__container',{delay:400,origin:'bottom'}) 
+  sr.reveal('.brands',{interval:100}) 
+  sr.reveal('.secondary__image, .contact__us__left',{origin:'left'}) 
+  sr.reveal('.about__us__right,.contuct__image',{origin:'right'}) 

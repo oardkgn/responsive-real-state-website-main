@@ -38,11 +38,12 @@ body{
     width: 100%;
     background-color: whitesmoke;
     transition: all 0.3s;
+    overflow: hidden;
 }
 
 p{
     color: #292c35;
-     /* color: rgb(57, 57, 57);  */
+      color: rgb(87, 87, 87);  
 }
 
 .btn{
@@ -174,7 +175,7 @@ header.dragging{
 }
 
 header.dragging .header__navbar .bottom__menu{
-    top: 740px;
+    top: calc(100vh - 100px);
     padding: 24px 40px;
     width: 300px;
     height: 85px;
@@ -405,9 +406,7 @@ header.dragging .header__navbar .bottom__menu{
     
 }
 
-.hero__left{
 
-}
 
 /* ------------------------------------------------------------------------ */
 
@@ -459,9 +458,6 @@ header.dragging .header__navbar .bottom__menu{
     padding: 20px;
 }
 
-.a_residence:hover{
-    
-}
 
 .residance__info{
     margin-top: 20px;
@@ -781,6 +777,30 @@ header.dragging .header__navbar .bottom__menu{
     }
     .top__menu{
         display: none;
+    }
+    h5{
+        font-size: 1.2rem;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.rem;
+    }
+    .contact__us__left .parag{
+        font-size: 0.8rem !important;
+    }
+    .about__us__right .parag{
+        font-size: 0.8rem !important;
+    }
+    .value__parag{
+        font-size: 0.7rem;
+    }
+    button{
+        font-size: 1rem;
+    }
+    .top__menu a{
+        font-size: 0.8rem;
     }
 }
 
